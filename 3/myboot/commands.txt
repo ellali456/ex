@@ -1,0 +1,5 @@
+as -o basic.o basic.s
+ld -o basic.bin --oformat binary -e init  -Ttext 0x7c00 basic.o
+
+emu-system-i386 ./basic.bin  -bios ../../../seabios/out/bios.bin
+
