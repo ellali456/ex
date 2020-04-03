@@ -3,13 +3,6 @@
 	* open source
 
 * running
-	* after downloading all the neccesary packages, I compiled the seabios into a bios.bin product
-	* qemu-system-x86_64 --boot menu=on,splash-time=15000 -bios ./out/bios.bin
-		* menu=on - so i could enter the ipxe menu 
-		* splash=time=15000 - so i would have time to press the manu option
-		* ESC to enter BIOS menu 
-		* ctrl B to enter ipxe menu 
-			* dhcp 
-				* in order to obtain an IP 
-			* chain http://boot.ipxe.org/demo/boot.php
-				* to boot with a basic linux image 
+	* after downloading all the necessary packages, I compiled the seabios into a bios.bin product
+	* Download basic linux img
+	* qemu-sytem-i386 -hda ../linux-0.2.img -bios ./out/bios.bin
